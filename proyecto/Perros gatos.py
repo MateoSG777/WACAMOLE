@@ -33,13 +33,13 @@ def registrar_mascota_interesadas(config, beneficiarios, interesados):
     nombre_mascota = input("Nombre de la mascota: ")
     tipo_mascota = ""
     while tipo_mascota not in ['Perro', 'Gato']:
-        tipo_mascota = input("Tipo de mascota (Perro/Gato): ").capitalize()
+        tipo_mascota = input("Tipo de mascota (Perro/Gato): ").capitalize() ## .capitalize lo usamos para que acepte por ejemplo PERRO o GaTo
     edad = int(input("Edad de la mascota: "))
 
-    nuevo = [propietario, cedula, nombre_mascota, tipo_mascota, edad, 4, [0, 0, 0, 0]]
-    beneficiarios.append(nuevo)
+    nuevo = [propietario, cedula, nombre_mascota, tipo_mascota, edad, 4, [0, 0, 0, 0]] ## el 4 se pone porque las dosis estan directamente definidas para ser 4 por cada mascota 
+    beneficiarios.append(nuevo) ## coloca lista de nuevo adentro de la lista beneficiario con el .append
     config[3] -= 4
-    print(f"\n¡Aprobado! Se han asignado 4 dosis para {nombre_mascota}")
+    print(f"\nAprobado, se han asignado 4 dosis para {nombre_mascota}")
 
 def mostrar_beneficiarios(beneficiarios):
     print("\nLista de Beneficiarios:")
@@ -183,5 +183,5 @@ def main():
             print("\nOpción inválida")
             print("Por favor, seleccione una opción válida")
     print("\nPrograma finalizado")
-    
+
 main()
