@@ -137,12 +137,13 @@ def mostrar_mascotas_por_tipo(beneficiarios):
     print(f"Gatos registrados: {gatos}")
 
 def consultar_interes():
-    while True:
+    a = ""
+    while a != "si" and a != "no":
         print("\n=== REGISTRO DE INTERÉS ===")
-        interes = input("¿Desea registrarse para recibir el beneficio? (Si/No): ").lower()
-        if interes in ["si", "no"]:
-            return interes == "si"
-        print("\nPor favor responda Si o No")
+        a = input("¿Desea registrarse para recibir el beneficio? (Si/No): ").lower()
+        if a != "si" and a != "no":
+            print("\nPor favor responda Si o No")
+    return a
 
 def main():
     beneficiarios = []
