@@ -97,7 +97,7 @@ def acceso_beneficiario(beneficiarios):
                     solicitar_dosis(beneficiario)
                 elif opcion == "3":
                     mostrar_dosis(beneficiario)
-            return
+            return ##adawdasdaw
     print("Beneficiario no encontrado")
 
 def mostrar_estadisticas(config, beneficiarios):
