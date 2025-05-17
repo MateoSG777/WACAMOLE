@@ -1,17 +1,16 @@
 def main():
-
-    m=[[0 for i in range (3)] for j in range (5)]
+    # Create a 5x3 matrix
+    m = [[0 for i in range(3)] for j in range(5)]
     x = 1
-    j = 0
-    for k in range (5):
-        for i in range (3):
-            m [i][j] = x
-            x = x + 1
-    if j <= 3:
-        j = j + 2
-    else:
-        j = j -1
-        if j == 3:
-            j = 1
-    print(m)
+    
+    # Populate the matrix
+    for row in range(5):
+        for col in range(3):
+            m[row][col] = x
+            x += 1
+    
+    # Print the matrix in a more readable format
+    for row in m:
+        print(row)
+
 main()
